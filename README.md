@@ -10,3 +10,7 @@ Fomo Feeder is a stock market feed reader and daemon/API that provides real-time
 - Daemon mode
 - Customizable data feeds
 - Supports multiple data formats
+
+
+# Quick start
+npx typeorm init --name MyProject --database postgres

@@ -16,7 +16,9 @@ async function main() {
 
     const db = await createDatabaseConnection({ filename: 'main.db' });
     useContainer(Container);
-    Container.set('db', db);
+    //import { AppDataSource } from "./index"
+    //const photoRepository = AppDataSource.getRepository(Photo)
+
 
     const app = createExpressServer({
         controllers: [path.join(__dirname, '/controllers/*.ts')],

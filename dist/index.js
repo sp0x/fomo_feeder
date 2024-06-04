@@ -25,7 +25,8 @@ function main() {
     return __awaiter(this, void 0, void 0, function* () {
         const db = yield (0, db_1.createDatabaseConnection)({ filename: 'main.db' });
         (0, routing_controllers_1.useContainer)(typedi_1.Container);
-        typedi_1.Container.set('db', db);
+        //import { AppDataSource } from "./index"
+        //const photoRepository = AppDataSource.getRepository(Photo)
         const app = (0, routing_controllers_1.createExpressServer)({
             controllers: [path_1.default.join(__dirname, '/controllers/*.ts')],
             middlewares: [path_1.default.join(__dirname, '/middlewares/*.ts')],

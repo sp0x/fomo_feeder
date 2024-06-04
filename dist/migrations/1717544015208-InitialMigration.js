@@ -8,20 +8,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createDatabaseConnection = void 0;
-const sqlite3_1 = __importDefault(require("sqlite3"));
-const sqlite_1 = require("sqlite");
-function createDatabaseConnection(options) {
-    return __awaiter(this, void 0, void 0, function* () {
-        var database = yield (0, sqlite_1.open)({
-            filename: options.filename,
-            driver: sqlite3_1.default.Database
+exports.InitialMigration1717544015208 = void 0;
+class InitialMigration1717544015208 {
+    up(queryRunner) {
+        return __awaiter(this, void 0, void 0, function* () {
         });
-        return database;
-    });
+    }
+    down(queryRunner) {
+        return __awaiter(this, void 0, void 0, function* () {
+        });
+    }
 }
-exports.createDatabaseConnection = createDatabaseConnection;
+exports.InitialMigration1717544015208 = InitialMigration1717544015208;

@@ -1,0 +1,41 @@
+{
+  "name": "fomo_feeder",
+  "version": "1.0.0",
+  "description": "Fomo Feeder is a stock market feed reader and daemon/API that provides real-time stock market data from various sources. It is designed to be used as a backend for stock market applications, trading bots, and other financial applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts",
+    "watch": "nodemon src/index.ts",
+    "build": "tsc",
+    "serve": "node dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.14.1",
+    "@types/uuid": "^9.0.8",
+    "express": "^4.19.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@types/express-validator": "^3.0.0",
+    "body-parser": "^1.20.2",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "express-validator": "^7.1.0",
+    "http-errors": "^2.0.0",
+    "multer": "^1.4.5-lts.1",
+    "routing-controllers": "^0.10.4",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "typedi": "^0.10.0",
+    "uuid": "^9.0.1"
+  }
+}

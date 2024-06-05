@@ -2,7 +2,6 @@
   "name": "fomo_feeder",
   "version": "1.0.0",
   "description": "Fomo Feeder is a stock market feed reader and daemon/API that provides real-time stock market data from various sources. It is designed to be used as a backend for stock market applications, trading bots, and other financial applications.",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node src/index.ts",
@@ -11,6 +10,7 @@
     "serve": "node dist",
     "typeorm": "typeorm-ts-node-esm",
     "migration:run": "npm run typeorm migration:run -- -d ./src/data-source.ts",
+    "migration:generate": "npm run typeorm migration:generate -- -d ./src/data-source.ts",
     "migration:show": "npm run typeorm migration:show -- -d ./src/data-source.ts"
   },
   "author": "",
@@ -23,6 +23,7 @@
     "@types/uuid": "^9.0.8",
     "express": "^4.19.2",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.4.5"
   },
   "dependencies": {

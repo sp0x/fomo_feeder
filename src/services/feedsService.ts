@@ -1,19 +1,26 @@
 import { Service, Inject } from 'typedi';
-import { Database } from 'sqlite';
+import { Repository } from 'typeorm';
+import { v4 as uuidv4 } from 'uuid';
+import { Feed } from '../entity/feed';
 
 @Service()
 class FeedsService {
-    constructor(@Inject('db') private db: Database) { }
+    constructor(@Inject('FeedRepository') private feedsRepository: Repository<Feed>) { }
 
     async getAllFeeds() {
-        const feeds = await this.db.all('SELECT * FROM feeds');
-        return feeds;
+        return await this.feedsRepository.find();
     }
 
     async createFeed(feed: any) {
-        const { title, url } = feed;
-        const result = await this.db.run('INSERT INTO feeds (title, url) VALUES (?, ?)', [title, url]);
-        return result;
+        const { title, uri } = feed;
+        console.log('feed', feed);
+        const newFeed: Feed = {
+            id: uuidv4(),
+            title,
+            uri
+        }
+        await this.feedsRepository.save(newFeed);
+        return newFeed;
     }
 }
 

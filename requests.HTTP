@@ -1,0 +1,11 @@
+### Create a feed
+POST http://localhost:3000/feeds HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Reddit/stocks",
+    "uri": "https://reddit.com/r/stocks.rss"
+} 
+
+### Get all feeds
+GET http://localhost:3000/feeds HTTP/1.1

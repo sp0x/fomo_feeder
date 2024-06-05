@@ -1,8 +1,9 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, Generated } from "typeorm"
 
 @Entity()
 export class Feed {
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('uuid')
+    @Generated('uuid')
     id: string;
     @Column()
     title: string;

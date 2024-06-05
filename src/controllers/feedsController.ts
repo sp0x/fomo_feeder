@@ -4,6 +4,11 @@ import FeedsService from '../services/feedsService';
 import { Service } from 'typedi';
 
 
+interface FeedDto {
+    title: string;
+    url: string;
+}
+
 @Service()
 @JsonController('/feeds')
 export class FeedsController {
@@ -15,7 +20,7 @@ export class FeedsController {
     }
 
     @Post('/')
-    create(@Body() feed: any, @Req() request: Request, @Res() response: Response) {
-        return this.feedsService.createFeed(feed);
+    async create(@Body() feed: FeedDto, @Req() request: Request, @Res() response: Response) {
+        return await this.feedsService.createFeed(feed);
     }
 }

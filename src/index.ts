@@ -14,7 +14,7 @@ const host = process.env.HOST || 'localhost';
 
 async function main() {
 
-    const db = await createDatabaseConnection({ filename: 'main.db' });
+    //const db = await createDatabaseConnection({ filename: 'main.db' });
     useContainer(Container);
     //import { AppDataSource } from "./index"
     //const photoRepository = AppDataSource.getRepository(Photo)

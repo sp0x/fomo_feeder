@@ -8,7 +8,10 @@
     "start": "ts-node src/index.ts",
     "watch": "nodemon src/index.ts",
     "build": "tsc",
-    "serve": "node dist"
+    "serve": "node dist",
+    "typeorm": "typeorm-ts-node-esm",
+    "migration:run": "npm run typeorm migration:run -- -d ./src/data-source.ts",
+    "migration:show": "npm run typeorm migration:show -- -d ./src/data-source.ts"
   },
   "author": "",
   "license": "ISC",

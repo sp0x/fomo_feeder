@@ -7,6 +7,6 @@ export const AppDataSource = new DataSource({
     type: "sqlite",
     database: `${environment}.db`,
     entities: [Feed],
-    migrations: [],
+    migrations: ["migrations/**/*.ts"],
     subscribers: [],
 })

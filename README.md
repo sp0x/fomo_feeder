@@ -16,5 +16,20 @@ Fomo Feeder is a stock market feed reader and daemon/API that provides real-time
 
 ### Migrations
 
+To run migrations:
+
+```bash
+npm run migration:run
+```
+
+To show migrations:
+
+```bash
+npm run migration:show
+```
+
 To generate one: 
-npx ts-node ./node_modules/typeorm/cli.js migration:generate ./src/migrations/Feed -d ./src/data-source.ts
+
+```bas
+npm run migration:generate ./src/migrations/NewOne
+```
